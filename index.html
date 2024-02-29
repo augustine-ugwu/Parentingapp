@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Registration Form</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+  <body>
+    <nav class="navbar">
+      <nav class="nav-logo">ParentConnect</nav>
+      <button class="login-btn">Log In</button>
+      <input
+        spellcheck="false"
+        type="text"
+        class="search"
+        id="search"
+        placeholder="e.g. Nike Trainers"
+      />
+      <button
+        onclick="toggleSearch()"
+        type="button"
+        class="search-toggle search-btn"
+      ></button>
+    </nav>
+
+    <div class="left-section">
+      <div class="hero">
+        <img src="/Assets/bg.jpg" alt="" />
+        <div class="overlay-text">
+          <h1 class="hero-text">Join Us Now</h1>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h3 class="right-section-title">
+        <b>News Feed</b>
+      </h3>
+      <div class="card">
+        <img src="/Assets/black_family.jpg" alt="Avatar" style="width: 100%" />
+        <div class="container">
+          <h4>9 Things Parents of Successful Children All Have in Common</h4>
+          <p><b>Read More</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="side-footer"></div>
+
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
+
+    <script type="text/javascript">
+      const toggleSearch = () => document.body.classList.toggle("open");
+    </script>
+    <script src="/main.js"></script>
+  </body>
+</html>

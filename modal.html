@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Button to open the modal -->
+    <button onclick="openModal()">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Registration Form</h2>
+        <form>
+          <label for="username">Username:</label><br />
+          <input type="text" id="username" name="username" /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" /><br />
+          <label for="password">Password:</label><br />
+          <input type="password" id="password" name="password" /><br /><br />
+          <input type="submit" value="Register" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
