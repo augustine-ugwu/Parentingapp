@@ -1,18 +1,16 @@
 const express = require("express");
-const connectDB = require('./db')
-const Post = require('./models/postModel')
-const User = require('./models/userModel')
-const bcrypt = require('bcryptjs')
-
+const connectDB = require("./db");
+const Post = require("./models/postModel");
+const User = require("./models/userModel");
+const bcrypt = require("bcryptjs");
 
 //Init app & middleware
 const app = express();
-app.use(express.json())
-app.use(express.urlencoded({extended: false}))
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // connect db
-connectDB()
+connectDB;
 
 //routes
 app.get('/M00877074/posts', async (req, res)=>{
@@ -58,7 +56,7 @@ app.post('/M00877074', async (req, res)=>{
       throw new Error(`Please body can't be empty`)
   }
 
-  // create user
+  // create post
   const post = await Post.create({
       author,
       content
@@ -71,7 +69,6 @@ app.post('/M00877074', async (req, res)=>{
 })
 
 
-
-app.listen(4000, ()=>{
-  console.log("App is listening on port 4000")
-})
+app.listen(4000, () => {
+  console.log("App is listening on port 4000");
+});

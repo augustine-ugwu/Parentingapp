@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal Registration Form</title>
+    <title>ParentConnect</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +23,9 @@
   <body>
     <nav class="navbar">
       <nav class="nav-logo">ParentConnect</nav>
-      <button class="login-btn">Log In</button>
+      <button class="login-btn" onclick="openModal('loginModal')">
+        Log In
+      </button>
       <input
         spellcheck="false"
         type="text"
@@ -50,13 +52,15 @@
             parents. Together, let's embark on this enriching journey of
             parenthood, because when parents connect, magic happens
           </p>
-          <button class="signup-btn">Sign Up</button>
+          <button class="signup-btn" onclick="openModal('signUpModal')">
+            Sign Up
+          </button>
         </div>
       </div>
     </div>
 
     <div class="right-section">
-      <h3 class="right-section-title">
+      <h3 class="title">
         <b>News Feed</b>
       </h3>
       <div class="card">
@@ -66,8 +70,81 @@
           <p><b>Read More</b></p>
         </div>
       </div>
+      <div class="upload">
+        <h4 class="title">Share Your Story: Upload Your Journey</h4>
+        <div class="drop_box">
+          <header>
+            <h4>Select File here</h4>
+          </header>
+          <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+          <input
+            type="file"
+            hidden
+            accept=".doc,.docx,.pdf"
+            id="fileID"
+            style="display: none"
+          />
+          <button class="btn">Choose File</button>
+        </div>
+      </div>
     </div>
-    <div class="side-footer"></div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('signUpModal')">&times;</span>
+        <h2 style="color: #fff">Sign Up</h2>
+        <div class="form">
+          <div class="inputBox">
+            <i>First Name</i>
+            <input type="text" required />
+          </div>
+          <div class="inputBox">
+            <i>Last Name</i>
+            <input type="text" required />
+          </div>
+          <div class="inputBox">
+            <i>Username</i>
+            <input type="text" required />
+          </div>
+          <div class="inputBox">
+            <i>Password</i>
+            <input type="password" required />
+          </div>
+          <div class="inputBox">
+            <i>Confirm Password</i>
+            <input type="password" required />
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Sign In" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2 style="color: #fff">Login</h2>
+        <div class="form">
+          <div class="inputBox">
+            <i>Username</i>
+            <input type="text" required />
+          </div>
+          <div class="inputBox">
+            <i>Password</i>
+            <input type="password" required />
+          </div>
+          <div class="links">
+            <a href="#">Forgot Password</a>
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Login" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript">
       const toggleMenu = () => {
